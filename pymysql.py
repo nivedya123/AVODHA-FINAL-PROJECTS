@@ -1,4 +1,7 @@
+from tkinter import *
 import pymysql
+root = Tk()
+bg = PhotoImage(file = "flower.png")
 x=pymysql.connect('localhost','root',''root1','avodha')
 cr=x.cursor()
 cr.execute('create table Employee(name char(20),age int)')
@@ -10,3 +13,4 @@ for i in res:
    print(i)
 x.commit()
 x.close()
+root.mainloop()
